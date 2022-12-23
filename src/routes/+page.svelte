@@ -19,9 +19,9 @@
 		<Button class="mt-6">Withdraw</Button>
 		<Button palette="primary">Deposit</Button>
 		<ButtonGroup class="mt-6">
-			<Button>Withdraw</Button>
-			<Button>Withdraw</Button>
-			<Button>Withdraw</Button>
+			<Button>ABC</Button>
+			<Button>ABC</Button>
+			<Button>ABC</Button>
 		</ButtonGroup>
 	</Container>
 </Section>
