@@ -1,8 +1,8 @@
 <script lang="ts">
 	import clsx from 'clsx';
+	import { getContext } from 'svelte';
 
-	export let className: string | undefined = undefined;
-	export { className as class };
+	const group = getContext('group');
 
 	/**
 	 * @summary specifies an href and causes the DOM node type to be an anchor tag.
@@ -15,9 +15,11 @@
 	 */
 	export let palette: 'base' | 'primary' = 'base';
 
-	const baseClasses = 'px-4 py-2 font-bold tracking-wider text-sm rounded-lg border';
+	const baseClasses = 'px-5 py-2 font-bold tracking-wider text-sm border';
+	const groupClasses = 'rounded-none first:rounded-l-full last:rounded-r-full hover:relative';
+	const noGroupClasses = 'rounded-full shadow-sm';
 	const borderClasses = {
-		base: 'border-base-300 dark:border-base-600 hover:border-base-400 hover:dark:border-base-500',
+		base: 'border-base-300 hover:border-base-400 dark:border-base-600 hover:dark:border-base-500',
 		primary: 'border-primary-900 hover:border-primary-800'
 	};
 	const paletteClasses = {
@@ -27,11 +29,12 @@
 	const disabledClasses = 'cursor-not-allowed pointer-events-none opacity-50';
 
 	const classes = clsx(
-		className,
 		baseClasses,
+		group ? groupClasses : noGroupClasses,
 		borderClasses[palette],
 		paletteClasses[palette],
-		$$props.disabled && disabledClasses
+		$$props.disabled && disabledClasses,
+		$$props.class
 	);
 </script>
 
