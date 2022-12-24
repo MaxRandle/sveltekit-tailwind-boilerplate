@@ -1,13 +1,9 @@
 <script>
 	import PageLayout from '@layouts/PageLayout.svelte';
+	import '@styles/fonts/inter/inter.css';
+	import '@styles/main.css';
 </script>
 
 <PageLayout>
 	<slot />
 </PageLayout>
-
-<style>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-</style>

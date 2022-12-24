@@ -30,7 +30,7 @@
 		base: 'text-base-900 dark:text-base-50',
 		weak: 'text-base-500 dark:text-base-400',
 		weaker: 'text-base-400 dark:text-base-500',
-		primary: 'text-primary-600 dark:text-primary-300'
+		primary: 'text-primary-800 dark:text-primary-300'
 	};
 
 	const tag = as ?? level === 1 ? 'h1' : level === 2 ? 'h2' : 'h3';
