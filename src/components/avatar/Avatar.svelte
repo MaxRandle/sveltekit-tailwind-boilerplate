@@ -1,5 +1,8 @@
 <script lang="ts">
 	import clsx from 'clsx';
+	import { getAvatarGroupContext } from './@types';
+
+	const group = getAvatarGroupContext();
 
 	/**
 	 * @summary Image url.
@@ -34,8 +37,9 @@
 		md: 'avatar-md w-12 h-12 text-lg',
 		lg: 'avatar-lg w-14 h-14 text-xl'
 	};
+	const groupClasses = '-ml-4 first:ml-0 border-2 border-current-bg';
 
-	const classes = clsx(baseClasses, sizeClasses[size]);
+	const classes = clsx(baseClasses, sizeClasses[size], group && groupClasses, $$props.class);
 
 	const imageClasses = 'absolute inset';
 </script>

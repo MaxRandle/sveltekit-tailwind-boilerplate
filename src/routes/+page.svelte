@@ -8,6 +8,7 @@
 
 	import { UserIcon } from 'svelte-feather-icons';
 	import Section from '@layouts/Section.svelte';
+	import AvatarGroup from '@components/avatar/AvatarGroup.svelte';
 </script>
 
 <Section>
@@ -42,9 +43,16 @@
 </Section>
 
 <Section>
-	<Container>
+	<Container class="space-y-4">
 		<Avatar size="sm">MR</Avatar>
 		<Avatar size="md"><UserIcon /></Avatar>
 		<Avatar size="lg" src="http://placekitten.com/96/96/" />
+
+		<AvatarGroup>
+			<Avatar src="http://placekitten.com/96/96/" />
+			<Avatar><UserIcon /></Avatar>
+			<Avatar src="http://placekitten.com/96/96/" />
+			<Avatar>+5</Avatar>
+		</AvatarGroup>
 	</Container>
 </Section>

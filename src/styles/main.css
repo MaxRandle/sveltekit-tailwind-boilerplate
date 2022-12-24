@@ -28,18 +28,20 @@
 	--primary-900: #42307d;
 }
 
+:root {
+	--current-bg: white;
+	--current-color: var(--base-900);
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--current-bg: var(--base-900);
+		--current-color: var(--base-50);
+	}
+}
+
 html,
 body {
 	font-family: 'Inter';
-
-	background: white;
-	color: var(--base-900);
-}
-
-@media (prefers-color-scheme: dark) {
-	html,
-	body {
-		background: var(--base-900);
-		color: var(--base-50);
-	}
+	background: var(--current-bg);
+	color: var(--current-color);
 }
