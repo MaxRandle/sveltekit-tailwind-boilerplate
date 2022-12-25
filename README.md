@@ -36,3 +36,30 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+# Component usage
+
+Groups handle multiple of the same type of element.
+
+```
+<ButtonGroup>
+    <Button />
+    <Button />
+    <Button />
+</ButtonGroup>
+
+<AvatarGroup>
+    <Avatar />
+    <Avatar />
+    <Avatar />
+</AvatarGroup>
+```
+
+Containers handle an element with some additional content
+
+```
+<AvatarContainer>
+    <Avatar />
+    <div>...</div>
+</AvatarContainer>
+```
