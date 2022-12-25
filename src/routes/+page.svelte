@@ -9,6 +9,7 @@
 	import { UserIcon } from 'svelte-feather-icons';
 	import Section from '@layouts/Section.svelte';
 	import AvatarGroup from '@components/avatar/AvatarGroup.svelte';
+	import AvatarContainer from '@components/avatar/AvatarContainer.svelte';
 </script>
 
 <Section>
@@ -44,12 +45,30 @@
 
 <Section>
 	<Container class="space-y-4">
-		<Avatar size="sm">MR</Avatar>
-		<Avatar size="md"><UserIcon /></Avatar>
-		<Avatar size="lg" src="http://placekitten.com/96/96/" />
+		<AvatarContainer>
+			<Avatar size="sm">OR</Avatar>
+			<div>
+				<Typography weight="semibold">Olivia Rhye</Typography>
+				<Typography color="weak">olivia@untitledui.com</Typography>
+			</div>
+		</AvatarContainer>
+		<AvatarContainer>
+			<Avatar size="md"><UserIcon /></Avatar>
+			<div>
+				<Typography weight="semibold">Olivia Rhye</Typography>
+				<Typography color="weak">olivia@untitledui.com</Typography>
+			</div>
+		</AvatarContainer>
+		<AvatarContainer>
+			<Avatar size="lg" src="http://placekitten.com/96/96/" />
+			<div>
+				<Typography weight="semibold">Olivia Rhye</Typography>
+				<Typography color="weak">olivia@untitledui.com</Typography>
+			</div>
+		</AvatarContainer>
 
 		<AvatarGroup>
-			<Avatar src="http://placekitten.com/96/96/" />
+			<Avatar>OR</Avatar>
 			<Avatar><UserIcon /></Avatar>
 			<Avatar src="http://placekitten.com/96/96/" />
 			<Avatar>+5</Avatar>

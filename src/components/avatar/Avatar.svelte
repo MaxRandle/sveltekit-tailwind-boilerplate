@@ -1,8 +1,9 @@
 <script lang="ts">
 	import clsx from 'clsx';
-	import { getAvatarGroupContext } from './@types';
+	import { getAvatarContainerContext, getAvatarGroupContext, type Size } from './@types';
 
 	const group = getAvatarGroupContext();
+	const container = getAvatarContainerContext();
 
 	/**
 	 * @summary Image url.
@@ -14,16 +15,7 @@
 	 */
 	export let alt: string | undefined = undefined;
 
-	/**
-	 * @summary Determines the width and height. Defaults to `md`.
-	 *
-	 * `sm` = `2rem`.
-	 *
-	 * `md` = `3rem`.
-	 *
-	 * `lg` = `4rem`.
-	 */
-	export let size: 'sm' | 'md' | 'lg' = 'md';
+	export let size: Size = 'md';
 
 	const baseClasses = [
 		'avatar',
@@ -38,8 +30,19 @@
 		lg: 'avatar-lg w-14 h-14 text-xl'
 	};
 	const groupClasses = '-ml-4 first:ml-0 border-2 border-current-bg';
+	const containerClasses = {
+		sm: 'mr-3',
+		md: 'mr-3',
+		lg: 'mr-4'
+	};
 
-	const classes = clsx(baseClasses, sizeClasses[size], group && groupClasses, $$props.class);
+	const classes = clsx(
+		baseClasses,
+		sizeClasses[size],
+		group && groupClasses,
+		container && containerClasses[size],
+		$$props.class
+	);
 
 	const imageClasses = 'absolute inset';
 </script>

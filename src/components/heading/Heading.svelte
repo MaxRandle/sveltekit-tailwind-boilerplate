@@ -21,9 +21,9 @@
 
 	const baseClasses = 'block';
 	const levelClasses = {
-		1: 'text-5xl md:text-6xl font-normal',
-		2: 'text-3xl md:text-4xl font-medium',
-		3: 'text-xl md:text-2xl font-semibold'
+		1: 'text-6xl md:text-7xl font-normal',
+		2: 'text-4xl md:text-5xl font-medium',
+		3: 'text-2xl md:text-3xl font-semibold'
 	};
 
 	const colorClasses = {
